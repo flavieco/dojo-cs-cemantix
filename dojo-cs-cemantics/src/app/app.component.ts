@@ -35,7 +35,8 @@ export class AppComponent {
       })
     ).subscribe(result=> {
       this.hasError = false;
-      this.myResultDistance = result.value
+      console.log(result);
+      this.myResultDistance = Math.max(0, result.result *100)
     });
   }
 }
